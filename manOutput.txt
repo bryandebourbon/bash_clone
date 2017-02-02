@@ -1,0 +1,133 @@
+This file is used for navigation by the man Command.
+
+cat
+{
+The cat command is used to display the contents of a file in the JShell.
+
+Syntax: cat FILE
+}
+
+cd
+{
+The cd (change directory) command is used to navigate through the directories within the file system.
+
+Syntax: cd DIR
+}
+
+cp
+{
+The cp (copy) command is used to copy items. If the given parameter is a directory, the contents will be recursively copied.
+
+Syntax: cp OLDPATH NEWPATH
+}
+
+echo
+{
+The echo command is used to generate output. The output can be displayed on the screen, or to a file, as specified in the command call.
+
+Syntax: echo STRING
+}
+
+exit
+{
+The exit command is used to terminate the JShell.
+
+Syntax: exit
+}
+
+find
+{
+The find command is used to recursively search through the given paths for file names that contain REGEX. If any are found,
+they will be displayed with their full path.
+
+Syntax: find REGEX PATH ...
+}
+
+get
+{
+Retrieves the file at the given web address and adds it to the current directory.
+
+Examples:
+
+a) get http://www.cs.cmu.edu/~spok/grimmtmp/073.txt
+Will get the contents of the file i.e. 073.txt and add it to the current
+directory.
+
+b) get http://www.ub.edu/gilcub/SIMPLE/simple.html
+Will get the contents of the file i.e. simple.html (html code) and add it
+to the current directory.
+
+Syntax: get URL
+}
+
+grep
+{
+The grep command is used to print any any lines that contain REGEX in the given path,
+which must be a file if the optional parameter is not supplied.
+
+If the [-R] optional parameter is supplied, and the given path is a directory, the directory will be
+transversed through recursively. For all lines in all files that contain REGEX, the path of the file
+will be printed, and then the line that contained REGEX.
+
+Syntax: grep REGEX PATH ...
+	grep [-R] REGEX PATH ...
+}
+
+ls
+{
+The ls (list) command is used to display the contents of directories. If no paths are specified in the command call, the contents
+of the current directory will be displayed. Otherwise, the contents of each specified directory will be displayed. Note that
+if any of the parameters are files, only the file name will be displayed.
+
+The [-R] optional parameter is used to recursively list any directories (or files) found as sub directories/files of the specified
+paths. If no paths are specified, the current directory will be used by default.
+
+Syntax: ls
+	ls [PATH ...]
+	ls [-R]
+	ls [-R] [PATH ...]
+}
+
+man
+{
+The man (manual) command is used to display information about a command. This includes what the command does, as well as
+valid syntax for calling the command.
+
+Note that when acceptable syntax is displayed, [] indicates an optional parameter, and ... indicates a list.
+
+Syntax: man COMMAND
+}
+
+mkdir
+{
+The mkdir (make directory) command is used to make a directory inside the current directory.
+
+Syntax: mkdir DIR ...
+}
+
+mv
+{
+The mv (move) command is used to move a file or directory from one directory to another. The destination path must be a directory
+so that the desired file can be moved into it.
+
+Syntax: mv OLDPATH NEWPATH
+}
+
+pwd
+{
+The pwd (print working directory) command is used to display the current directory in the JShell. This is helpful for navigation
+purposes.
+
+Syntax: pwd
+}
+
+rm
+{
+The rm (remove) command is used to remove files/directories from the system. In the case of directories, the contents
+are recursively removed. Everytime a file or directory is to be removed, the user is prompted for confirmation.
+
+The [-f] optional parameter is used for removal without any prompts for confirmation.
+
+Syntax: rm PATH ...
+	rm [-f] PATH ...
+}
